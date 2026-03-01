@@ -107,15 +107,15 @@ async def process_age_sent(message: Message, state: FSMContext):
     # Создаем объекты инлайн-кнопок
     male_button = InlineKeyboardButton(
         text='Мужской ♂',
-        callback_data='male'
+        callback_data='Мужской'
     )
     female_button = InlineKeyboardButton(
         text='Женский ♀',
-        callback_data='female'
+        callback_data='Женский'
     )
     undefined_button = InlineKeyboardButton(
         text='🤷 Пока не ясно',
-        callback_data='undefined_gender'
+        callback_data='error'
     )
     # Добавляем кнопки в клавиатуру (две в одном ряду и одну в другом)
     keyboard: list[list[InlineKeyboardButton]] = [
@@ -189,15 +189,15 @@ async def process_photo_sent(message: Message,
     # Создаем объекты инлайн-кнопок
     secondary_button = InlineKeyboardButton(
         text='Среднее',
-        callback_data='secondary'
+        callback_data='Среднее'
     )
     higher_button = InlineKeyboardButton(
         text='Высшее',
-        callback_data='higher'
+        callback_data='Высшее'
     )
     no_edu_button = InlineKeyboardButton(
         text='🤷 Нету',
-        callback_data='no_edu'
+        callback_data='NO'
     )
     # Добавляем кнопки в клавиатуру (две в одном ряду и одну в другом)
     keyboard: list[list[InlineKeyboardButton]] = [
